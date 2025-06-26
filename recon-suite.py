@@ -1,105 +1,72 @@
 #!/usr/bin/env python3
 
 import os
+import subprocess
 import argparse
-import datetime
-import shutil
+from datetime import datetime
 
-# 🏗️ Create output directory
-def create_output_dir(target):
-    timestamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
-    folder_name = f"results/{target}_{timestamp}"
-    os.makedirs(folder_name, exist_ok=True)
-    return folder_name
+def run_command(command, output_file=None):
+    try:
+        print(f"[+] Running: {command}")
+        result = subprocess.check_output(command, shell=True, stderr=subprocess.STDOUT, text=True)
+        if output_file:
+            with open(output_file, 'w') as f:
+                f.write(result)
+        return result
+    except subprocess.CalledProcessError as e:
+        if output_file:
+            with open(output_file, 'w') as f:
+                f.write(e.output)
+        return e.output
 
-# 🚀 Run command if tool/folder exists
-def run_tool(tool_name, command, output_path, is_script=False, folder_check=None):
-    if is_script:
-        if not os.path.isdir(folder_check):
-            print(f"❌ Folder missing: {folder_check}")
-            print(f"👉 Clone it: git clone {folder_check}")
-            return
-    elif shutil.which(tool_name) is None:
-        print(f"❌ Tool not found: {tool_name}")
-        print(f"👉 Install it using your package manager.")
-        return
+def setup_output_dir(target):
+    now = datetime.now().strftime("%Y%m%d_%H%M%S")
+    directory = f"recon_results_{target}_{now}"
+    os.makedirs(directory, exist_ok=True)
+    return directory
 
-    print(f"🔧 Running {tool_name}...")
-    os.system(f"{command} > {output_path}")
-    print(f"✅ Output saved: {output_path}")
+def recon(target):
+    output_dir = setup_output_dir(target)
 
-# 🎯 Main Function
+    # Nmap
+    nmap_output = os.path.join(output_dir, "nmap.txt")
+    run_command(f"nmap -sS -Pn -T4 {target}", nmap_output)
+
+    # WhatWeb
+    whatweb_output = os.path.join(output_dir, "whatweb.txt")
+    run_command(f"whatweb {target}", whatweb_output)
+
+    # Dirsearch
+    dirsearch_output = os.path.join(output_dir, "dirsearch.txt")
+    run_command(f"python3 dirsearch/dirsearch.py -u {target} -e php,html,js,txt -o {dirsearch_output}", dirsearch_output)
+
+    # Sublist3r
+    sublist3r_output = os.path.join(output_dir, "sublist3r.txt")
+    run_command(f"python3 Sublist3r/sublist3r.py -d {target}", sublist3r_output)
+
+    # Nuclei
+    nuclei_output = os.path.join(output_dir, "nuclei.txt")
+    run_command(f"nuclei -u {target} -silent", nuclei_output)
+
+    # WAFW00F
+    waf_output = os.path.join(output_dir, "wafw00f.txt")
+    run_command(f"wafw00f {target}", waf_output)
+
+    # DNSRecon
+    dnsrecon_output = os.path.join(output_dir, "dnsrecon.txt")
+    run_command(f"dnsrecon -d {target}", dnsrecon_output)
+
+    # SSLScan
+    sslscan_output = os.path.join(output_dir, "sslscan.txt")
+    run_command(f"sslscan {target}", sslscan_output)
+
+    print(f"[✔] Recon complete. Reports saved to: {output_dir}")
+
 def main():
-    parser = argparse.ArgumentParser(description="ReconVeritas – Automated Recon Suite")
-    parser.add_argument("-t", "--target", required=True, help="Target domain or IP")
+    parser = argparse.ArgumentParser(description="ReconVeritas - Automated Recon Suite")
+    parser.add_argument("-t", "--target", help="Target domain or IP", required=True)
     args = parser.parse_args()
-
-    target = args.target
-    out_dir = create_output_dir(target)
-    print(f"\n📁 Saving results to: {out_dir}\n")
-
-    # List of tool runs
-    tools = [
-        {
-            "name": "nmap",
-            "cmd": f"nmap -sC -sV -Pn {target}",
-            "out": f"{out_dir}/nmap.txt",
-        },
-        {
-            "name": "whatweb",
-            "cmd": f"whatweb {target}",
-            "out": f"{out_dir}/whatweb.txt",
-        },
-        {
-            "name": "wafw00f",
-            "cmd": f"wafw00f {target}",
-            "out": f"{out_dir}/wafw00f.txt",
-        },
-        {
-            "name": "dnsrecon",
-            "cmd": f"dnsrecon -d {target}",
-            "out": f"{out_dir}/dnsrecon.txt",
-        },
-        {
-            "name": "sslscan",
-            "cmd": f"sslscan {target}",
-            "out": f"{out_dir}/sslscan.txt",
-        },
-        {
-            "name": "nuclei",
-            "cmd": f"nuclei -u {target}",
-            "out": f"{out_dir}/nuclei.txt",
-        },
-        {
-            "name": "sublist3r",
-            "cmd": f"python3 Sublist3r/sublist3r.py -d {target}",
-            "out": f"{out_dir}/sublist3r.txt",
-            "is_script": True,
-            "folder": "Sublist3r"
-        },
-        {
-            "name": "dirsearch",
-            "cmd": f"python3 dirsearch/dirsearch.py -u http://{target}",
-            "out": f"{out_dir}/dirsearch.txt",
-            "is_script": True,
-            "folder": "dirsearch"
-        },
-    ]
-
-    # Execute tools
-    for tool in tools:
-        run_tool(
-            tool_name=tool["name"],
-            command=tool["cmd"],
-            output_path=tool["out"],
-            is_script=tool.get("is_script", False),
-            folder_check=tool.get("folder", None)
-        )
-
-    print("\n✅ Recon Complete! Check the results folder.\n")
+    recon(args.target)
 
 if __name__ == "__main__":
     main()
-
-
-
