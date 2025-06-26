@@ -63,10 +63,8 @@ def recon(target):
     print(f"[✔] Recon complete. Reports saved to: {output_dir}")
 
 def main():
-    parser = argparse.ArgumentParser(description="ReconVeritas - Automated Recon Suite")
-    parser.add_argument("-t", "--target", help="Target domain or IP", required=True)
-    args = parser.parse_args()
-    recon(args.target)
+    print("✅ ReconVeritas running...")  # or your main code here
 
 if __name__ == "__main__":
     main()
+
