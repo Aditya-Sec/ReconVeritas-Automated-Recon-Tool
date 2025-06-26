@@ -29,6 +29,15 @@ else
   echo "✅ Alias already exists in ~/.bashrc"
 fi
 
+# Step 4.1: Ensure ~/.local/bin is in PATH
+if ! grep -q 'export PATH="$HOME/.local/bin:$PATH"' ~/.bashrc; then
+  echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+  echo "✅ Added ~/.local/bin to PATH in ~/.bashrc"
+else
+  echo "✅ ~/.local/bin already in PATH"
+fi
+
+
 # Step 5: Final Instructions
 echo "✅ Installation complete!"
 echo "👉 Please run: source ~/.bashrc"
