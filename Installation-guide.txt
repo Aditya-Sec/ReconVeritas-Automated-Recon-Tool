@@ -19,6 +19,9 @@ pip install .
 -----------------------------------
 reconveritas -t example.com
 
+📌 If reconveritas is not found, add this line to your ~/.bashrc or ~/.zshrc:
+export PATH="$HOME/.local/bin:$PATH"
+
 🧠 Note:
 - Supports both domain and IP input
 - Results stored in /scans/ folder automatically
