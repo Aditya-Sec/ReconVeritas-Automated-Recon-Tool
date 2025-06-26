@@ -1,0 +1,132 @@
+# Nmap 7.95 scan initiated Wed Jun 25 11:23:23 2025 as: /usr/lib/nmap/nmap -sC -sV -Pn -oN results/www.google.com_20250625-112323/nmap.txt www.google.com
+Nmap scan report for www.google.com (142.251.43.4)
+Host is up (0.019s latency).
+Other addresses for www.google.com (not scanned): 2404:6800:4009:809::2004
+rDNS record for 142.251.43.4: pnbomb-bo-in-f4.1e100.net
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      gws
+|_http-server-header: gws
+| http-robots.txt: 203 disallowed entries (15 shown)
+| /search /sdch /groups /index.html? /? /?hl=*& 
+|_/?hl=*&*&gws_rd=ssl /imgres /u/ /setprefs /m? /m/ /wml? /wml/? /wml/search?
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Date: Wed, 25 Jun 2025 15:24:38 GMT
+|     Expires: -1
+|     Cache-Control: private, max-age=0
+|     Content-Type: text/html; charset=ISO-8859-1
+|     Content-Security-Policy-Report-Only: object-src 'none';base-uri 'self';script-src 'nonce-UqxtVYBPk4BPmc295Ai6ow' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp
+|     P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+|     Server: gws
+|     X-XSS-Protection: 0
+|     X-Frame-Options: SAMEORIGIN
+|     Set-Cookie: AEC=AVh_V2iDjUrKF1Nx9v9PN3R_-dgLPXjy3yr5gzVvTX5U23XtlZ3Q_Pv12w; expires=Mon, 22-Dec-2025 15:24:38 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax
+|     Set-Cookie: NID=524=ZrAs9iMnPVW1Q0ZBKsLiBL0qN7yjYqx2rR805ru8SWUGNclNeUGWLolyniKgMpv_Sb-D_ApfAR4cd6JZrCGGO540GNwDC4QDkdgwO01HXmuhWkCHdCXFAvmVE1_gIluC7rIG9zTewYH_GfAofjQSo6H9KYDrI6xaO3kuvkZztaa9Zhag_2ymI
+|   HTTPOptions: 
+|     HTTP/1.0 405 Method Not Allowed
+|     Content-Type: text/html; charset=UTF-8
+|     Referrer-Policy: no-referrer
+|     Content-Length: 1592
+|     Date: Wed, 25 Jun 2025 15:24:39 GMT
+|     <!DOCTYPE html>
+|     <html lang=en>
+|     <meta charset=utf-8>
+|     <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+|     <title>Error 405 (Method Not Allowed)!!1</title>
+|     <style>
+|_    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding
+|_http-title: Google
+|_http-favicon: Google
+443/tcp open  ssl/https gws
+| tls-nextprotoneg: 
+|   grpc-exp
+|   h2
+|_  http/1.1
+|_ssl-date: TLS randomness does not represent time
+|_http-server-header: gws
+| tls-alpn: 
+|   grpc-exp
+|   h2
+|_  http/1.1
+|_http-title: Google
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Date: Wed, 25 Jun 2025 15:24:45 GMT
+|     Expires: -1
+|     Cache-Control: private, max-age=0
+|     Content-Type: text/html; charset=ISO-8859-1
+|     Content-Security-Policy-Report-Only: object-src 'none';base-uri 'self';script-src 'nonce-QPerWolL_ygJ_k8Q9s_RoQ' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp
+|     Accept-CH: Sec-CH-Prefers-Color-Scheme
+|     P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+|     Server: gws
+|     X-XSS-Protection: 0
+|     X-Frame-Options: SAMEORIGIN
+|     Set-Cookie: AEC=AVh_V2ibcb_1U-whW0I1U5wpITLPgWJzoM6mjM6mV7SoJSNJj-zAoprlbGs; expires=Mon, 22-Dec-2025 15:24:45 GMT; path=/; domain=.google.com; Secure; HttpOnly; SameSite=lax
+|_    Set-Cookie: NID=524=KUYB_D2DdjKH55K341gVwOh346LBtZwMVVHVqzuBQhWiriF6_hTupqetZUm1maXC0-dbuaAuBmfGsZTM8W0QSEEDoJkC_-_nddjTgCYQGNnx1dwDpVuNBtwAu8dd-O6Vuym6vr-gvAD1
+|_http-favicon: Google
+| ssl-cert: Subject: commonName=www.google.com
+| Subject Alternative Name: DNS:www.google.com
+| Not valid before: 2025-06-02T08:37:21
+|_Not valid after:  2025-08-25T08:37:20
+| http-robots.txt: 203 disallowed entries (15 shown)
+| /search /sdch /groups /index.html? /? /?hl=*& 
+|_/?hl=*&*&gws_rd=ssl /imgres /u/ /setprefs /m? /m/ /wml? /wml/? /wml/search?
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.95%I=7%D=6/25%Time=685C14B6%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,2F0E,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Wed,\x2025\x20Jun\x2020
+SF:25\x2015:24:38\x20GMT\r\nExpires:\x20-1\r\nCache-Control:\x20private,\x
+SF:20max-age=0\r\nContent-Type:\x20text/html;\x20charset=ISO-8859-1\r\nCon
+SF:tent-Security-Policy-Report-Only:\x20object-src\x20'none';base-uri\x20'
+SF:self';script-src\x20'nonce-UqxtVYBPk4BPmc295Ai6ow'\x20'strict-dynamic'\
+SF:x20'report-sample'\x20'unsafe-eval'\x20'unsafe-inline'\x20https:\x20htt
+SF:p:;report-uri\x20https://csp\.withgoogle\.com/csp/gws/other-hp\r\nP3P:\
+SF:x20CP=\"This\x20is\x20not\x20a\x20P3P\x20policy!\x20See\x20g\.co/p3phel
+SF:p\x20for\x20more\x20info\.\"\r\nServer:\x20gws\r\nX-XSS-Protection:\x20
+SF:0\r\nX-Frame-Options:\x20SAMEORIGIN\r\nSet-Cookie:\x20AEC=AVh_V2iDjUrKF
+SF:1Nx9v9PN3R_-dgLPXjy3yr5gzVvTX5U23XtlZ3Q_Pv12w;\x20expires=Mon,\x2022-De
+SF:c-2025\x2015:24:38\x20GMT;\x20path=/;\x20domain=\.google\.com;\x20Secur
+SF:e;\x20HttpOnly;\x20SameSite=lax\r\nSet-Cookie:\x20NID=524=ZrAs9iMnPVW1Q
+SF:0ZBKsLiBL0qN7yjYqx2rR805ru8SWUGNclNeUGWLolyniKgMpv_Sb-D_ApfAR4cd6JZrCGG
+SF:O540GNwDC4QDkdgwO01HXmuhWkCHdCXFAvmVE1_gIluC7rIG9zTewYH_GfAofjQSo6H9KYD
+SF:rI6xaO3kuvkZztaa9Zhag_2ymI")%r(HTTPOptions,6DC,"HTTP/1\.0\x20405\x20Met
+SF:hod\x20Not\x20Allowed\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r
+SF:\nReferrer-Policy:\x20no-referrer\r\nContent-Length:\x201592\r\nDate:\x
+SF:20Wed,\x2025\x20Jun\x202025\x2015:24:39\x20GMT\r\n\r\n<!DOCTYPE\x20html
+SF:>\n<html\x20lang=en>\n\x20\x20<meta\x20charset=utf-8>\n\x20\x20<meta\x2
+SF:0name=viewport\x20content=\"initial-scale=1,\x20minimum-scale=1,\x20wid
+SF:th=device-width\">\n\x20\x20<title>Error\x20405\x20\(Method\x20Not\x20A
+SF:llowed\)!!1</title>\n\x20\x20<style>\n\x20\x20\x20\x20\*{margin:0;paddi
+SF:ng:0}html,code{font:15px/22px\x20arial,sans-serif}html{background:#fff;
+SF:color:#222;padding:15px}body{margin:7%\x20auto\x200;max-width:390px;min
+SF:-height:180px;padding:30px\x200\x2015px}\*\x20>\x20body{background:url\
+SF:(//www\.google\.com/images/errors/robot\.png\)\x20100%\x205px\x20no-rep
+SF:eat;padding-right:205px}p{margin:11px\x200\x2022px;overflow:hidden}ins{
+SF:color:#777;text-decoration:none}a\x20img{border:0}@media\x20screen\x20a
+SF:nd\x20\(max-width:772px\){body{background:none;margin-top:0;max-width:n
+SF:one;padding-right:0}}#logo{background:url\(//www\.google\.com/images/br
+SF:anding");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.95%T=SSL%I=7%D=6/25%Time=685C14BD%P=x86_64-pc-linux-gnu
+SF:%r(GetRequest,2094,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Wed,\x2025\x20Ju
+SF:n\x202025\x2015:24:45\x20GMT\r\nExpires:\x20-1\r\nCache-Control:\x20pri
+SF:vate,\x20max-age=0\r\nContent-Type:\x20text/html;\x20charset=ISO-8859-1
+SF:\r\nContent-Security-Policy-Report-Only:\x20object-src\x20'none';base-u
+SF:ri\x20'self';script-src\x20'nonce-QPerWolL_ygJ_k8Q9s_RoQ'\x20'strict-dy
+SF:namic'\x20'report-sample'\x20'unsafe-eval'\x20'unsafe-inline'\x20https:
+SF:\x20http:;report-uri\x20https://csp\.withgoogle\.com/csp/gws/other-hp\r
+SF:\nAccept-CH:\x20Sec-CH-Prefers-Color-Scheme\r\nP3P:\x20CP=\"This\x20is\
+SF:x20not\x20a\x20P3P\x20policy!\x20See\x20g\.co/p3phelp\x20for\x20more\x2
+SF:0info\.\"\r\nServer:\x20gws\r\nX-XSS-Protection:\x200\r\nX-Frame-Option
+SF:s:\x20SAMEORIGIN\r\nSet-Cookie:\x20AEC=AVh_V2ibcb_1U-whW0I1U5wpITLPgWJz
+SF:oM6mjM6mV7SoJSNJj-zAoprlbGs;\x20expires=Mon,\x2022-Dec-2025\x2015:24:45
+SF:\x20GMT;\x20path=/;\x20domain=\.google\.com;\x20Secure;\x20HttpOnly;\x2
+SF:0SameSite=lax\r\nSet-Cookie:\x20NID=524=KUYB_D2DdjKH55K341gVwOh346LBtZw
+SF:MVVHVqzuBQhWiriF6_hTupqetZUm1maXC0-dbuaAuBmfGsZTM8W0QSEEDoJkC_-_nddjTgC
+SF:YQGNnx1dwDpVuNBtwAu8dd-O6Vuym6vr-gvAD1");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jun 25 11:25:46 2025 -- 1 IP address (1 host up) scanned in 142.52 seconds
