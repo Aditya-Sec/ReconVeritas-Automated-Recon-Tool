@@ -1,0 +1,29 @@
+🛠️ INSTALLATION GUIDE — ReconVeritas
+
+📁 Step 1: Clone the Tool
+-----------------------------------
+git clone https://github.com/Aditya-Sec/ReconVeritas-Automated-Recon-Tool.git
+cd ReconVeritas-Automated-Recon-Tool
+
+📦 Step 2: Install Dependencies
+-----------------------------------
+sudo apt update
+sudo apt install nmap whatweb wafw00f dnsrecon sslscan -y
+pip install -r requirements.txt
+
+📌 Step 3: Install the Tool Globally
+-----------------------------------
+pip install .
+
+✅ Now you can run the tool using:
+-----------------------------------
+reconveritas -t example.com
+
+🧠 Note:
+- Supports both domain and IP input
+- Results stored in /scans/ folder automatically
+- Educational & lab-use only
+
+🔗 Author: Aditya Goswami
+GitHub: github.com/Aditya-Sec
+LinkedIn: www.linkedin.com/in/aditya-kumar-goswami
