@@ -1,0 +1,26 @@
+[[92mmissing-sri[0m] [[94mhttp[0m] [[34minfo[0m] https://www.google.com [[96m"https://www.gstatic.com/og/_/js/k=og.asy.en_US.wq9F7Q2gBak.2019.O/rt=j/m=_ac,_awd,ada,lldp,qads,abld/exm=/d=1/ed=1/rs=AA2YrTum_NtqdAbMbBcub-EdBD9ru8edzA"[0m,[96m"https://www.gstatic.com/og/_/ss/k=og.asy.TvEPGkm_JiU.L.F4.O/m=ll_tdm,adcgm3,ll_fw,abld/excm=/d=1/ed=1/ct=zgms/rs=AA2YrTtqEliLPAsaji5jAMbjX_NdE-PCGw"[0m]
+[[92mweak-cipher-suites[0m:[1;92mtls-1.0[0m] [[94mssl[0m] [[32mlow[0m] www.google.com:443 [[96m"[tls10 TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA]"[0m]
+[[92mdeprecated-tls[0m:[1;92mtls_1.1[0m] [[94mssl[0m] [[34minfo[0m] www.google.com:443 [[96m"tls11"[0m]
+[[92mtls-version[0m] [[94mssl[0m] [[34minfo[0m] www.google.com:443 [[96m"tls10"[0m]
+[[92mdeprecated-tls[0m:[1;92mtls_1.0[0m] [[94mssl[0m] [[34minfo[0m] www.google.com:443 [[96m"tls10"[0m]
+[[92mweak-cipher-suites[0m:[1;92mtls-1.1[0m] [[94mssl[0m] [[32mlow[0m] www.google.com:443 [[96m"[tls11 TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA]"[0m]
+[[92mtls-version[0m] [[94mssl[0m] [[34minfo[0m] www.google.com:443 [[96m"tls11"[0m]
+[[92mtls-version[0m] [[94mssl[0m] [[34minfo[0m] www.google.com:443 [[96m"tls12"[0m]
+[[92mtls-version[0m] [[94mssl[0m] [[34minfo[0m] www.google.com:443 [[96m"tls13"[0m]
+[[92mfavicon-detect[0m:[1;92mgoogle[0m] [[94mhttp[0m] [[34minfo[0m] https://www.google.com/favicon.ico [[96m"708578229"[0m]
+[[92mrobots-txt[0m] [[94mhttp[0m] [[34minfo[0m] https://www.google.com/robots.txt
+[[92mrobots-txt-endpoint[0m] [[94mhttp[0m] [[34minfo[0m] https://www.google.com/robots.txt
+[[92msecurity-txt[0m] [[94mhttp[0m] [[34minfo[0m] https://www.google.com/.well-known/security.txt [[96m"https://g.co/vulnz"[0m,[96m"mailto:security@google.com"[0m]
+[[92mhttp-missing-security-headers[0m:[1;92mcross-origin-resource-policy[0m] [[94mhttp[0m] [[34minfo[0m] https://www.google.com
+[[92mhttp-missing-security-headers[0m:[1;92mpermissions-policy[0m] [[94mhttp[0m] [[34minfo[0m] https://www.google.com
+[[92mhttp-missing-security-headers[0m:[1;92mx-content-type-options[0m] [[94mhttp[0m] [[34minfo[0m] https://www.google.com
+[[92mhttp-missing-security-headers[0m:[1;92mx-permitted-cross-domain-policies[0m] [[94mhttp[0m] [[34minfo[0m] https://www.google.com
+[[92mhttp-missing-security-headers[0m:[1;92mreferrer-policy[0m] [[94mhttp[0m] [[34minfo[0m] https://www.google.com
+[[92mhttp-missing-security-headers[0m:[1;92mclear-site-data[0m] [[94mhttp[0m] [[34minfo[0m] https://www.google.com
+[[92mhttp-missing-security-headers[0m:[1;92mcross-origin-embedder-policy[0m] [[94mhttp[0m] [[34minfo[0m] https://www.google.com
+[[92mapple-app-site-association[0m] [[94mhttp[0m] [[34minfo[0m] https://www.google.com/apple-app-site-association [[96m"4ANB9W7R3P.com.google.GoogleDigitalEditions.enterprise"[0m,[96m"EQHXZ8M8AV.com.google.Stella.dev"[0m,[96m"4ANB9W7R3P.com.google.Stella.dev"[0m,[96m"4ANB9W7R3P.com.google.ShoppingExpress.nightly"[0m,[96m"EQHXZ8M8AV.com.google.photos.dev"[0m,[96m"4ANB9W7R3P.com.google.Azimuth"[0m,[96m"EQHXZ8M8AV.com.google.GoogleMobile.dev"[0m,[96m"EQHXZ8M8AV.com.google.ShoppingExpress"[0m,[96m"EQHXZ8M8AV.com.google.SendKitDemo.dev"[0m,[96m"4ANB9W7R3P.com.google.SendKitDemo.enterprise"[0m,[96m"4ANB9W7R3P.com.google.LightCycle.fishfood"[0m,[96m"4ANB9W7R3P.com.google.GoogleMobile.qadogfood"[0m,[96m"EQHXZ8M8AV.com.google.GoogleDigitalEditions.dev"[0m,[96m"EQHXZ8M8AV.com.google.GoogleMobile"[0m,[96m"4ANB9W7R3P.com.google.GoogleMobile.dogfood"[0m,[96m""[0m,[96m"4ANB9W7R3P.com.google.Stella"[0m,[96m"EQHXZ8M8AV.com.google.ShoppingExpress.dev"[0m,[96m"4ANB9W7R3P.com.google.GoogleMobile.rc"[0m,[96m"4ANB9W7R3P.com.google.GoogleDigitalEditions.daily"[0m,[96m"EQHXZ8M8AV.com.google.Dzimuth"[0m,[96m"4ANB9W7R3P.com.google.Rzimuth"[0m,[96m"4ANB9W7R3P.com.google.GoogleMobile.fishfood"[0m,[96m"EQHXZ8M8AV.com.google.GoogleDigitalEditions"[0m,[96m"EQHXZ8M8AV.com.google.Maps"[0m,[96m"4ANB9W7R3P.com.google.LightCycle.enterprise"[0m,[96m"4ANB9W7R3P.com.google.GoogleDigitalEditions.rc"[0m,[96m"EQHXZ8M8AV.com.google.Stella"[0m,[96m"4ANB9W7R3P.com.google.ShoppingExpress.enterprise"[0m,[96m"EQHXZ8M8AV.com.google.photos"[0m,[96m"4ANB9W7R3P.com.google.photos.enterprise"[0m,[96m"EQHXZ8M8AV.com.google.LightCycle"[0m,[96m"EQHXZ8M8AV.com.google.calendar"[0m,[96m"4ANB9W7R3P.com.google.photos.fishfood"[0m,[96m"4ANB9W7R3P.com.google.Czimuth"[0m,[96m"EQHXZ8M8AV.com.google.LightCycle.dev"[0m]
+[[92massetlinks-detect[0m] [[94mhttp[0m] [[34minfo[0m] https://www.google.com/.well-known/assetlinks.json
+[[92maddeventlistener-detect[0m] [[94mhttp[0m] [[34minfo[0m] https://www.google.com
+[[92mcaa-fingerprint[0m] [[94mdns[0m] [[34minfo[0m] www.google.com
+[[92mssl-issuer[0m] [[94mssl[0m] [[34minfo[0m] www.google.com:443 [[96m"Google Trust Services"[0m]
+[[92mssl-dns-names[0m] [[94mssl[0m] [[34minfo[0m] www.google.com:443 [[96m"www.google.com"[0m]
