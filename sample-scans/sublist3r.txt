@@ -1,0 +1,19 @@
+Sublist3r Results – Target: www.google.com
+
+[+] Enumerating subdomains using Sublist3r...
+
+Found 12 subdomains:
+- mail.google.com
+- drive.google.com
+- calendar.google.com
+- maps.google.com
+- translate.google.com
+- support.google.com
+- accounts.google.com
+- news.google.com
+- play.google.com
+- photos.google.com
+- books.google.com
+- sites.google.com
+
+🔎 All results saved in: sublist3r.txt
