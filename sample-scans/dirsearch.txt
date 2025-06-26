@@ -1,0 +1,17 @@
+Dirsearch Results – Target: http://www.google.com
+
+Extensions tested: php, html, js
+
+[200] /robots.txt
+[200] /humans.txt
+[403] /admin/
+[403] /config/
+[200] /login.html (Fake endpoint)
+[403] /server-status
+
+Scan Time: 9 seconds
+Total Paths Tested: 324
+
+💡 Note: Directory listing is disabled. Most admin paths are protected by ACL/WAF.
+
+📁 All output saved in: dirsearch.txt
