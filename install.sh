@@ -1,14 +1,16 @@
 #!/bin/bash
 
-echo "🔧 Starting Recon Automation Suite installation..."
+echo "🔧 Starting ReconVeritas installation..."
 
-# Update and install required system tools
-echo "📦 Installing system dependencies..."
+# Step 1: Update & install system tools
+echo "📦 Installing required system packages..."
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y nmap whatweb wafw00f dnsrecon sslscan git python3-pip
 
-# Clone required tools
-echo "📁 Cloning supporting tools..."
+# Step 2: Clone external tools into tools/ directory
+echo "📁 Cloning required recon tools..."
+
+mkdir -p tools
 
 # Dirsearch
 if [ ! -d "tools/dirsearch" ]; then
@@ -23,18 +25,19 @@ fi
 # Nuclei
 if [ ! -d "tools/nuclei" ]; then
   git clone https://github.com/projectdiscovery/nuclei.git tools/nuclei
-  cd tools/nuclei
+  echo "⚙️ Installing Go (for nuclei)..."
   sudo apt install -y golang
+  cd tools/nuclei
   go install
-  cd ../..
+  cd ../../
 fi
 
-# Install Python dependencies
+# Step 3: Python dependencies
 echo "🐍 Installing Python packages..."
 pip3 install -r requirements.txt
 
-# Make recon script executable
+# Step 4: Make main script executable
 chmod +x recon-suite.py
 
 echo "✅ Installation complete!"
-echo "Run the tool using: python3 recon-suite.py -t example.com"
+echo "👉 Run the tool using: python3 recon-suite.py -t example.com"
