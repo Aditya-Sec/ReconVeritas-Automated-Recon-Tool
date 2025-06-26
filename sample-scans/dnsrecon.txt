@@ -1,0 +1,6 @@
+[*] std: Performing General Enumeration against: www.google.com...
+[-] DNSSEC is not configured for www.google.com
+[*] 	 A www.google.com 142.250.192.196
+[*] 	 AAAA www.google.com 2404:6800:4009:80b::2004
+[*] Enumerating SRV Records
+[-] No SRV Records Found for www.google.com
