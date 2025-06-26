@@ -1,0 +1,8 @@
+nmap
+whatweb
+wafw00f
+dnsrecon
+sslscan
+sublist3r
+dirsearch
+nuclei
